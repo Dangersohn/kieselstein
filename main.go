@@ -26,7 +26,7 @@ func main() {
 
 	e := echo.New()
 	e.Renderer = t
-	e.GET("/jana", jana)
+	e.GET("/", jana)
 	e.Static("/images/*", "images")
 	log.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
